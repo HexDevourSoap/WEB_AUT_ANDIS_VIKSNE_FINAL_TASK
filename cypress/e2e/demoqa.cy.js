@@ -1,5 +1,13 @@
+import { HomePag } from "../pageObjects/HomePage"
 describe('template spec', () => {
-  it('passes', () => {
-    cy.visit('https://example.cypress.io')
+  beforeEach(() => {
+    cy.visit('https://demoqa.com/automation-practice-form')
   })
+
+  it('Make an Appointment', () => {
+
+
+  });
+
+
 })
