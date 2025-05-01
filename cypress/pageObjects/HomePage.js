@@ -80,5 +80,38 @@ export class HomePage extends BasePage {
 
 
 
+        static get validateStudent(){
+            return cy.get("body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody > tr:nth-child(1) > td:nth-child(2)");
+        }
+    
+        static get validateEmail(){
+            return cy.get("body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody > tr:nth-child(2) > td:nth-child(2)");
+        }
+        static get validateGender(){
+            return cy.get("body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody > tr:nth-child(3) > td:nth-child(2)");
+        }
+        static get validateMobile(){
+            return cy.get("body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody > tr:nth-child(4) > td:nth-child(2)");
+        }
+        static get validateDateOfBirth(){
+            return cy.get("body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody > tr:nth-child(5) > td:nth-child(2)");
+        }
+        static get validateSubject(){
+            return cy.get("body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody > tr:nth-child(6) > td:nth-child(2)");
+        }
+        static get validateHobby(){
+            return cy.get("body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody > tr:nth-child(7) > td:nth-child(2)");
+        }
+
+        static get validateAddress(){
+            return cy.get("body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody > tr:nth-child(9) > td:nth-child(2)");
+        }
+        static get validateStateAndCity(){
+            return cy.get("body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody > tr:nth-child(10) > td:nth-child(2)");
+        }
+        
+
+
+
 
 }

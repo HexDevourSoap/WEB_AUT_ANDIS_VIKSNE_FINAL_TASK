@@ -36,6 +36,55 @@ describe('template spec', () => {
       
      HomePage.submitButton.click();
     
+     HomePage.validateStudent
+    .should('be.visible')
+    .and('have.text', 'John Doe');
+
+    HomePage.validateEmail
+    .should('be.visible')
+    .and('have.text', 'demo@gmail.com');
+
+    HomePage.validateGender
+    .should('be.visible')
+    .and('have.text', 'Male');
+
+    HomePage.validateMobile
+    .should('be.visible')
+    .and('have.text', '3513456789');
+     
+    HomePage.validateDateOfBirth
+    .should('be.visible')
+    .and('have.text', '04 October,1990');
+
+    HomePage.validateSubject
+    .should('be.visible')
+    .and('have.text', 'Economics');
+
+    HomePage.validateHobby
+    .should('be.visible')
+    .and('have.text', 'Music');
+
+    HomePage.validateAddress
+    .should('be.visible')
+    .and('have.text', '123 Main St, Springfield, USA');
+
+    HomePage.validateStateAndCity
+    .should('be.visible')
+    .and('have.text', 'NCR Delhi');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   });
 
 
