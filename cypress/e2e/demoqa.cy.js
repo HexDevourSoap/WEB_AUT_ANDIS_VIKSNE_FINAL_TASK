@@ -24,7 +24,14 @@ describe('template spec', () => {
 
     
 
-    //HomePage.uploadPic.click();
+    cy.readFile('files/attake loli.png', 'base64').then(fileContent => {
+      cy.get('input[type="file"]').selectFile({
+        contents: Cypress.Buffer.from(fileContent, 'base64'),
+        fileName: 'attake loli.png',
+        mimeType: 'image/png',
+        lastModified: Date.now(),
+      });
+    });
 
 
      HomePage.addressField.type("123 Main St, Springfield, USA");
@@ -72,7 +79,9 @@ describe('template spec', () => {
     .should('be.visible')
     .and('have.text', 'NCR Delhi');
 
-
+    HomePage.validatePicture
+    .should('be.visible')
+    .and('have.text', 'attake loli.png');
 
 
 

@@ -47,9 +47,9 @@ export class HomePage extends BasePage {
             return cy.get("#hobbiesWrapper > div.col-md-9.col-sm-12 > div:nth-child(3) > label");
         }
 
-        static get uploadPic(){
-            return cy.get("#uploadPicture");
-        }
+        // static get uploadPic(){
+        //     return cy.get('input[type="file"]').selectFile('cypress/fixtures/sample.png');
+        // }
 
         static get stateButton(){
             return cy.get('#state > div > div.css-1hwfws3 > div.css-1wa3eu0-placeholder');
@@ -110,8 +110,10 @@ export class HomePage extends BasePage {
             return cy.get("body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody > tr:nth-child(10) > td:nth-child(2)");
         }
         
-
-
+        // static get validatePicture(){
+        static get validatePicture(){
+            return cy.get("body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody > tr:nth-child(8) > td:nth-child(2)");
+        }
 
 
 }
